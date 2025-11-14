@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+studnia
+
+# IDE / system
+*.swp
+*.swo
+*.vscode/
+*.idea/
+
+# Qt (jeśli kiedyś dodasz GUI)
+*.pro.user
+*.qmake.stash
+*.moc
+*.qrc
+*.ui.*

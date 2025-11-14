@@ -52,15 +52,17 @@ int main(){
 	
 	Re = sqrt((2*0.067*me*Ve)/(h*h));
 	Rh = sqrt((2*0.45*me*Vh)/(h*h));
+	double me_eff = mel(prc2);
+	double mh_eff = meh(prc2);
 	
 	
 	ke = stan(n, Re, a);
 	
-	Ee = (ke*ke*h*h)/(2*0.11*me);
+	Ee = (ke*ke*h*h)/(2*me_eff*me);
 	
 	
 	kh = stan(n, Rh, a);
-	Eh = (kh*kh*h*h)/(2*0.633*me);
+	Eh = (kh*kh*h*h)/(2*mh_eff*me);
 	
 	Etot = Ee + Eh + E2;
 	cout << "Fotony tej studni maja energie :" << Etot << "eV"<< endl;

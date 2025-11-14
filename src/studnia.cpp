@@ -13,3 +13,19 @@ double EgMg(double prc)
 {
 	return 1.606*prc + 1.503;
 }
+
+
+//Masa efektywna elektronu w zależności od zawartości magnezu
+double mel(double prc)
+{
+	prc=prc/100.0;
+	return 0.2*prc + (1.0-prc)*0.1;
+}
+
+
+//Masa efektywna dziury ciężkiej w zależności od zawartości magnezu
+double meh(double prc)
+{
+	prc=prc/100.0;
+	return 1.25*prc + (1.0-prc)*0.6;
+}
